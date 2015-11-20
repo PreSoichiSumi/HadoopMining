@@ -2,7 +2,7 @@
 
 <project name="commons">
 
-	<property name="ssh.server"         value="ec2-52-192-71-153.ap-northeast-1.compute.amazonaws.com" />
+	<property name="ssh.server"         value="ec2-52-192-211-65.ap-northeast-1.compute.amazonaws.com" />
 	<property name="ssh.user"           value="hadoop" />
 	<property name="ssh.pass"           value="" />
 	<property name="ssh.key"            value="C:/pbl/ssh_key/cs2015c6_key.pem" />

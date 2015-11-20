@@ -23,7 +23,7 @@
 
 	<target name="run.PrepareData-sumi" depends="prepare">
 		<sshexec host="${ssh.server}" username="${ssh.user}" keyfile="${ssh.key}" trust="yes"
-			command="hadoop jar main.jar posmining.enshu.PrepareDatan s3://cspiral-bigdata/posdata/"
+			command="hadoop jar main.jar posmining.enshu.PrepareData s3://cspiral-bigdata/posdata/"
 		/>
 	</target>
 
