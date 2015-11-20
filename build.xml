@@ -2,9 +2,8 @@
 
 <project>
 
-	<!-- 各メンバー固有のプロパティファイルの読み込み -->
+	<!-- プロパティファイルの読み込み -->
 	<import file="build-common.xml" />
-
 
 
 	<!-- おにぎり種別総数 --><!--
@@ -22,13 +21,13 @@
 		/>
 	</target>-->
 
-	<target name="run.TyukamanCountC6sumi" depends="prepare">
+	<target name="run.PrepareData-sumi" depends="prepare">
 		<sshexec host="${ssh.server}" username="${ssh.user}" keyfile="${ssh.key}" trust="yes"
-			command="hadoop jar main.jar posmining.enshu.GetTyukaman s3://cspiral-bigdata/posdata/"
+			command="hadoop jar main.jar posmining.enshu.PrepareDatan s3://cspiral-bigdata/posdata/"
 		/>
 	</target>
 
-	<!-- クラスタ実行のための準備タスク．プロジェクトをビルドしてJARに固めてSCPで送信する -->
+	<!-- プロジェクトをビルドしてJARに固めてSCPで送信 -->
 	<target name="prepare">
 
 		<mkdir dir="${build.path}" />

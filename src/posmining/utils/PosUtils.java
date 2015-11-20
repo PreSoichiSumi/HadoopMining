@@ -101,9 +101,6 @@ public class PosUtils {
 	/**
 	 * MRの出力フォルダを削除する．
 	 * （出力フォルダの上書きエラーを避けるため）
-	 *
-	 * ローカルHadoop環境とリモートHadoop環境のどちらでも対応可能
-	 *
 	 * @param outputDir 出力フォルダへのパス
 	 */
 	public static void deleteOutputDir(String outputDir) {

@@ -64,7 +64,6 @@ public class GetTyukaman {
 		job.waitForCompletion(true);
 	}
 
-
 	// Mapperクラスのmap関数を定義
 	public static class MyMapper extends Mapper<LongWritable, Text, CSKV, CSKV> {
 		protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
