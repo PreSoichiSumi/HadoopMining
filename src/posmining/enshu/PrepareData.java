@@ -86,9 +86,9 @@ public class PrepareData {
 			}else{
 				throw new IOException("(汗");
 			}
-			
-			
-			String data=csv[PosUtils.MONTH]+","+csv[PosUtils.WEEK]+","+csv[PosUtils.HOUR]+","+csv[PosUtils.ITEM_NAME]+","+csv[PosUtils.ITEM_COUNT]
+
+
+			String data=","+csv[PosUtils.MONTH]+","+csv[PosUtils.WEEK]+","+csv[PosUtils.HOUR]+","+csv[PosUtils.ITEM_NAME]+","+csv[PosUtils.ITEM_COUNT]
 					+","+csv[PosUtils.ITEM_PRICE];
 			// emitする （emitデータはCSKVオブジェクトに変換すること）
 			context.write(new CSKV(place), new CSKV(data));
