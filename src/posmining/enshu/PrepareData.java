@@ -76,19 +76,19 @@ public class PrepareData {
 			String place;
 			String test=csv[PosUtils.LOCATION];
 			if(test.startsWith("オフィス")){
-				place="オフィス街";
+				place="office";
 			}else if(test.startsWith("ロード")){
-				place="ロードサイド";
+				place="road";
 			}else if(test.startsWith("住宅")){
-				place="住宅街";
+				place="jutaku";
 			}else if(test.startsWith("駅前")){
-				place="駅前";
+				place="station";
 			}else{
 				throw new IOException("(汗");
 			}
 
 
-			String data=","+csv[PosUtils.MONTH]+","+csv[PosUtils.WEEK]+","+csv[PosUtils.HOUR]+","+csv[PosUtils.ITEM_NAME]+","+csv[PosUtils.ITEM_COUNT]
+			String data=","+csv[PosUtils.YEAR]+","+csv[PosUtils.MONTH]+","+csv[PosUtils.DATE]+","+csv[PosUtils.HOUR]+","/*+csv[PosUtils.ITEM_NAME]+","*/+csv[PosUtils.ITEM_COUNT]
 					+","+csv[PosUtils.ITEM_PRICE];
 			// emitする （emitデータはCSKVオブジェクトに変換すること）
 			context.write(new CSKV(place), new CSKV(data));
