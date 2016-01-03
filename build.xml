@@ -5,14 +5,6 @@
 	<!-- プロパティファイルの読み込み -->
 	<import file="build-common.xml" />
 
-
-	<!-- おにぎり種別総数 --><!--
-	<target name="run.OnigiriCountByType by kkz" depends="prepare">
-		<sshexec host="${ssh.server}" username="${ssh.user}" keyfile="${ssh.key}" trust="yes"
-			command="hadoop jar main.jar posmining.enshu.OnigiriCountByType s3://cspiral-bigdata/posdata/"
-		/>
-	</target>-->
-
 	<!-- おにぎり総数 -->
 	<!--
 	<target name="run.OnigiriCountC6sumi" depends="prepare">
